@@ -45,7 +45,7 @@ minimal_mistakes_skin: "default" #"default" "air", "aqua", "contrast", "dark", "
 # Displaying author info
 author:
   name: "Tianyu Zhang"
-  avatar: "/assets/images/gbt.jpeg"
+  avatar: "/assets/images/gbta.jpeg"
   bio: "*PhD at Nanyang Technological University*" # Note: Markdown is allowed
   location: "Singapore"
   links:
