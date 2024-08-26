@@ -230,7 +230,7 @@ img { /* Responsive images (ensure images don't scale beyond their parents) */ m
 #map_canvas img, .google-maps img { max-width: none; }
 
 /* Consistent form font size in all browsers, margin changes, misc */
-button, input, select, textarea { margin: 0; font-size: 150%; vertical-align: middle; }
+button, input, select, textarea { margin: 0; font-size: 128%; vertical-align: middle; }
 
 button, input { *overflow: visible; /* inner spacing ie IE6/7*/ line-height: normal; /* FF3/4 have !important on line-height in UA stylesheet*/ }
 
