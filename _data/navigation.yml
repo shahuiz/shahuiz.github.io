@@ -1,0 +1,11 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "Research"
+    url: /research/
+  # - title: "Teaching"
+  #   url: /teaching/
+  # - title: "CV"
+  #   url: /assets/docs/CoreyWhite_CV_2024.pdf
+
+  

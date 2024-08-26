@@ -18,24 +18,111 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Tianyu Zhang
-subtitile: Version 0.0
-email: your-email@example.com
-description: Welcome to my personal site! 
-# >- # this means to ignore newlines until "baseurl:"
-# baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://shahuiz.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: jekyllrb
-repository: "shahuiz/shahuiz.github.io"
-github_username: shahuiz
 locale: "en-US"
+title: "Tianyu Zhang"
+subtitile: "Version 0.0"
+name: "Tianyu Zhang"
+repository: "shahuiz/shahuiz.github.io"
+email: shahuiz@outlook.com
+description: Welcome to my personal site! 
+url: "https://shahuiz.github.io" 
+baseurl: "" # the subpath of your site, e.g. /blog
+# twitter_username: jekyllrb
+minimal_mistakes_skin: "default" #"default" "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
+
+# Socials
+# social:
+#   type: Person  # Person or Organization (defaults to Person)
+#   name: # If the user or organization name differs from the site's name
+#   links:
+#     - "https://twitter.com/corey_d_white"
+# twitter_username: corey_d_white
+# twitter:
+#   username: "corey_d_white"
+# github_username: shahuiz
+
+
+# Displaying author info
+author:
+  name: "Tianyu Zhang"
+  avatar: "/assets/images/gbt.jpeg"
+  bio: "*PhD at Nanyang Technological University*" # Note: Markdown is allowed
+  location: "Singapore"
+  links:
+  #  - label: "Website"
+   #   icon: "fas fa-fw fa-link"
+  #    url: "https://stefaniejfischer.github.io"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:tianyu005@e.ntu.edu.sg"
+    - label: "IACR"
+      icon: "fab fa-fw fa-google"
+      url: "https://www.iacr.org/cryptodb//data/author.php?authorkey=12897"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/corey_d_white"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/shahuiz"
+
+# Displaying website footer info
+footer:
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:tianyu005@e.ntu.edu.sg"
+    - label: "IACR"
+      icon: "fab fa-fw fa-google"
+      url: "https://www.iacr.org/cryptodb//data/author.php?authorkey=12897"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/corey_d_white"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/shahuiz"
+
+# Default layouts
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      classes: wide
+      author_profile: true
+      show_date: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      classes: wide
+      author_profile: true
 
 # Build settings
+markdown: kramdown
 theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+# remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
-# plugins:
-#   - jekyll-feed
+  
+include:
+ - _pages
+
+atom_feed:
+  hide: true
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -56,16 +143,3 @@ minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon"
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-logo: "/assets/images/gbt.jpeg"
-# masthead_title: "My Custom Title"
-
-head_scripts:
-  - https://code.jquery.com/jquery-3.2.1.min.js
-  # - /assets/js/your-custom-head-script.js
-teaser: /assets/images/gbt.jpeg
-
-header:
-  teaser: /assets/images/gbt.jpeg
-  image: /assets/images/gbt.jpeg
-
