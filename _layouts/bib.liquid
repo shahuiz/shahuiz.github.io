@@ -203,6 +203,7 @@
       {% endif %}
       {% if entry.bibtex_show %}
         <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+        <a class="cite btn btn-sm z-depth-0" role="button">Cite</a>
       {% endif %}
       {% if entry.html %}
         {% if entry.html contains '://' %}
@@ -243,6 +244,9 @@
           <a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Poster</a>
         {% endif %}
       {% endif %}
+      {% if entry.eprint %}
+        <a href="{{ entry.eprint }}" class="btn btn-sm z-depth-0" role="button">Eprint</a>
+      {% endif %}
       {% if entry.slides %}
         {% if entry.slides contains '://' %}
           <a href="{{ entry.slides }}" class="btn btn-sm z-depth-0" role="button">Slides</a>
@@ -250,8 +254,19 @@
           <a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Slides</a>
         {% endif %}
       {% endif %}
+      {% if entry.talk %}
+        {% if entry.talk contains '://' %}
+          <a href="{{ entry.talk }}" class="btn btn-sm z-depth-0" role="button">Talk</a>
+        {% else %}
+          <a href="{{ entry.talk | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Talk</a>
+        {% endif %}
+      {% endif %}
+      
       {% if entry.website %}
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
+      {% endif %}
+      {% if entry.url %}
+        <a href="{{ entry.url }}" class="btn btn-sm z-depth-0" role="button">URL</a>
       {% endif %}
     </div>
     {% if site.enable_publication_badges %}

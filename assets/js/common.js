@@ -15,6 +15,20 @@ $(document).ready(function () {
     $(this).parent().parent().find(".award.hidden.open").toggleClass("open");
     $(this).parent().parent().find(".bibtex.hidden").toggleClass("open");
   });
+  $("a.cite").click(function () {
+    var bibtexContent = $(this).parent().parent().find(".bibtex.hidden pre").text();
+    navigator.clipboard.writeText(bibtexContent).then(function() {
+      // Optional: Provide visual feedback
+      var originalText = $(this).text();
+      $(this).text("Copied!");
+      var button = this;
+      setTimeout(function() {
+        $(button).text(originalText);
+      }, 1500);
+    }.bind(this)).catch(function(err) {
+      console.error('Could not copy text: ', err);
+    });
+  });
   $("a").removeClass("waves-effect waves-light");
 
   // bootstrap-toc
